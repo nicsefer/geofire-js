@@ -1122,7 +1122,7 @@ var GeoQuery = function (firebaseRef, queryCriteria) {
     // If this is a "ready" callback, fire it if this query is already ready
     if (eventType === "ready") {
       if (_valueEventFired) {
-        callback();
+        callback(Object.keys(_locationsTracked));
       }
     }
 
