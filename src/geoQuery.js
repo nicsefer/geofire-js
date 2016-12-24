@@ -34,7 +34,7 @@ var GeoQuery = function (firebaseRef, queryCriteria) {
    */
   function _fireReadyEventCallbacks() {
     _callbacks.ready.forEach(function(callback) {
-      callback();
+      callback(Object.keys(_locationsTracked));
     });
   }
 
